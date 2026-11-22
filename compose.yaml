@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    environment:
+      GREETING: ${GREETING}
+    ports:
+      - "${HOST_PORT}:8000"
+    volumes:
+      - counter_data:/data
+
+volumes:
+  counter_data:
